@@ -1,0 +1,115 @@
+:root {
+    --toggle-color: black;
+    --bg-color: rgba(128, 0, 128, 0.5);
+    --btn-padding: 7px;
+    --icn-size: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Fira Code', monospace;
+    list-style-type: none;
+    color: var(--toggle-color);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+svg {
+    height: auto;
+    width: var(--icn-size);
+    fill: var(--toggle-color);
+}
+
+svg:hover {
+    transition-duration: 150ms;
+}
+
+li {
+    transition-duration: 150ms;
+    margin-top: 20px;
+}
+
+li:hover {
+    transition-duration: 150ms;
+    transform: translateY(-3px);
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid;
+    border-color: rgb(47, 51, 54);
+    border-radius: 12px;
+    padding: var(--btn-padding);
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--btn-padding);
+    border: 1px solid;
+    border-color: rgb(47, 51, 54);
+    border-radius: 12px;
+}
+
+a:hover {
+    background-color: var(--bg-color);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+.container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.socials {
+    position: fixed;
+    bottom: 0;
+    left: 40px;
+    margin-bottom: 10px;
+}
+
+.darkmodetoggle {
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    margin-bottom: 10px;
+}
+
+#light-logo {
+    position: fixed;
+    top: 0;
+    left: 40px;
+    margin-bottom: 10px;
+}
+
+#dark-logo {
+    position: fixed;
+    top: 0;
+    left: 40px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    height: 62px;
+    width: auto;
+}
