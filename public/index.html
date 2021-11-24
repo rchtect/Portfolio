@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="./script/darkmode.js"></script>
+    <script src="./script/script.js"></script>
     <link rel="stylesheet" href="./static/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
@@ -15,6 +16,7 @@
     />
   </head>
   <body>
+    <audio src="./static/click.mp3" id="clickAudio"></audio>
       <div id="light-logo">
         <svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo">
             <line x1="610.071" y1="591.139" x2="812.209" y2="389" stroke="url(#paint0_linear_8_5)" stroke-width="79" stroke-linecap="round"/>
@@ -234,7 +236,7 @@
     </div>
     <div class="darkmodetoggle">
       <div id="btn-1">
-        <button>
+        <button onclick="playClick();">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="48px"
@@ -249,7 +251,7 @@
         </button>
       </div>
       <div id="btn-2">
-        <button>
+        <button onclick="playClick();">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="48px"

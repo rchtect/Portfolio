@@ -2,7 +2,7 @@
     --toggle-color: black;
     --bg-color: rgba(128, 0, 128, 0.5);
     --btn-padding: 7px;
-    --icn-size: 40px;
+    --icn-size: 35px;
 }
 
 * {
@@ -110,6 +110,6 @@ section {
 }
 
 .logo {
-    height: 62px;
+    height: 51px;
     width: auto;
 }
