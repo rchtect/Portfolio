@@ -6,16 +6,16 @@ function isDark() {
   {
     document.getElementById("light-logo").style.display = "none";
     document.getElementById("dark-logo").style.display = "block";
-    document.documentElement.style.setProperty('--toggle-color', 'black');
+    document.documentElement.style.setProperty('--toggle-color', 'rgb(0, 0, 0)');
     document.getElementById("btn-1").style.display = "block";
     document.getElementById("btn-2").style.display = "none";
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor = "rgb(256, 256, 256)";
     
   }
   if (localStorage.getItem("value") == "true") {
     document.getElementById("light-logo").style.display = "block";
     document.getElementById("dark-logo").style.display = "none";
-    document.documentElement.style.setProperty('--toggle-color', 'white');
+    document.documentElement.style.setProperty('--toggle-color', 'rgb(256, 256, 256)');
     document.getElementById("btn-1").style.display = "none";
     document.getElementById("btn-2").style.display = "block";
     document.body.style.backgroundColor = darkColor;
@@ -23,10 +23,10 @@ function isDark() {
   } else if (localStorage.getItem("value") == "false"){
     document.getElementById("light-logo").style.display = "none";
     document.getElementById("dark-logo").style.display = "block";
-    document.documentElement.style.setProperty('--toggle-color', 'black');
+    document.documentElement.style.setProperty('--toggle-color', 'rgb(0, 0, 0)');
     document.getElementById("btn-1").style.display = "block";
     document.getElementById("btn-2").style.display = "none";
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor = "rgb(256, 256, 256)";
     
   }
 }
@@ -34,7 +34,7 @@ function isDark() {
 function toggleDark() {
   document.getElementById("light-logo").style.display = "block";
   document.getElementById("dark-logo").style.display = "none";
-  document.documentElement.style.setProperty('--toggle-color', 'white');
+  document.documentElement.style.setProperty('--toggle-color', 'rgb(256, 256, 256)');
   document.getElementById("btn-1").style.display = "none";
   document.getElementById("btn-2").style.display = "block";
   document.body.style.backgroundColor = darkColor;
@@ -43,12 +43,12 @@ function toggleDark() {
 }
 
 function toggleLight() {
-  document.documentElement.style.setProperty('--toggle-color', 'black');
+  document.documentElement.style.setProperty('--toggle-color', 'rgb(0, 0, 0)');
   document.getElementById("light-logo").style.display = "none";
   document.getElementById("dark-logo").style.display = "block";
   document.getElementById("btn-1").style.display = "block";
   document.getElementById("btn-2").style.display = "none";
-  document.body.style.backgroundColor = "white";
+  document.body.style.backgroundColor = "rgb(256, 256, 256)";
   localStorage.setItem("value", "false");
   document.body.style.transition = "150ms"
 }

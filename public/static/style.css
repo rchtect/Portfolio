@@ -1,6 +1,6 @@
 :root {
-    --toggle-color: black;
-    --bg-color: rgba(128, 0, 128, 0.5);
+    --toggle-color: rgb(0, 0, 0);
+    --bg-color: rgba(247, 0, 255, 0.438);
     --btn-padding: 7px;
     --icn-size: 35px;
 }
@@ -13,55 +13,107 @@
     font-family: 'Fira Code', monospace;
     list-style-type: none;
     color: var(--toggle-color);
+    transition-duration: 150ms;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(3px);
+}
+
+button {
+    border: none;
+}
+
+#cta {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+}
+ul.nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+li:hover {
+    backdrop-filter: blur(3px);
+}
 svg {
     height: auto;
     width: var(--icn-size);
     fill: var(--toggle-color);
 }
 
-svg:hover {
-    transition-duration: 150ms;
-}
-
-li {
+li.btn-social {
     transition-duration: 150ms;
     margin-top: 20px;
 }
 
-li:hover {
-    transition-duration: 150ms;
-    transform: translateY(-3px);
+li.nav-itm {
+    margin-left: 4px;
+    font-size: 20px;
 }
 
-button {
+li.btn-social:hover {
+    transition-duration: 150ms;
+    transform: translateY(-5px);
+}
+
+#returnUp {
+    transition-duration: 150ms;
+    transform: translateY(-5px);
+}
+
+.toggle-button {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
-    border: 1px solid;
-    border-color: rgb(47, 51, 54);
-    border-radius: 12px;
+
     padding: var(--btn-padding);
+}
+
+.toggle-button:hover {
+    backdrop-filter: blur(3px);
+    transition-duration: 150ms;
+    transform: translateY(-5px);
 }
 
 a {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bolder;
     padding: var(--btn-padding);
-    border: 1px solid;
-    border-color: rgb(47, 51, 54);
-    border-radius: 12px;
 }
 
-a:hover {
-    background-color: var(--bg-color);
+a#up-icn {
+    transform: rotate(-90deg);
+    text-decoration: none;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+li.btn-social:hover {
+    backdrop-filter: blur(3px);
+    transition-duration: 150ms;
+    transform: translateY(-5px);
 }
 
 section {
@@ -99,14 +151,14 @@ section {
     position: fixed;
     top: 0;
     left: 40px;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #dark-logo {
     position: fixed;
     top: 0;
     left: 40px;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .logo {
