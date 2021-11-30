@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rchtect's portfolio</title>
+    <title>rchtect</title>
+    <link rel="icon" type="image/svg" href="./static/favicon.svg"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="./script/darkmode.js"></script>
     <script src="./script/vanilla-particles.js"></script>
+    <script src="./script/typewriter.js"></script>
     <script src="./script/script.js"></script>
     <link rel="stylesheet" href="./static/style.css" />
     <link
@@ -19,7 +21,7 @@
   <body>
     <canvas id="particles">
     </canvas>
-    <div class="container">
+    <div class="container"">
       <div id="light-logo">
         <svg
           width="1000"
@@ -591,21 +593,27 @@
           </defs>
         </svg>
       </div>
-      <section class="cta" id="cta">
-        <nav>
-          <ul class="nav">
-            <li class="nav-itm">
-              <a href="#aboutme" onclick="playClick();">About me</a>
-            </li>
-            <li class="nav-itm">
-              <a href="#projects" onclick="playClick();">Projects</a>
-            </li>
-            <li class="nav-itm">
-              <a href="#contact" onclick="playClick();">Contact me</a>
-            </li>
-          </ul>
-        </nav>
-          <h1>Hi, I'm rchtect, a web developer.</h1>
+      <section class="cta" id="cta" onfocus="noNeedBtn();">
+        <div class="nav-wrapper">
+          <nav>
+            <ul class="nav">
+              <li class="nav-itm">
+                <a href="#aboutme" onclick="playClick(); needBtn();">About me</a>
+              </li>
+              <li class="nav-itm">
+                <a href="#projects" onclick="playClick(); needBtn();">Projects</a>
+              </li>
+              <li class="nav-itm">
+                <a href="#contact" onclick="playClick(); needBtn();">Contact me</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+          <div class="intro-container">
+            <h1 class="intro">
+              Hello, I'm <b>rchtect</b> a :<b><span class="typing-fx" data-wait="3000" data-words='["Developer", "Designer", "Music Producer", "Stoic", "Freethinker", "Creator", "Technology Enthusiast"]'></span></b>
+            </h1>
+          </div>
         <div class="card">
 
         </div>
@@ -673,10 +681,10 @@
     </div>
     <div class="darkmodetoggle">
       <div id="returnUp">
-        <a href="#cta" class="toggle-button" id="up-icn" onclick="playClick();"> -> </a>
+        <a href="#cta" class="toggle-button hide" id="up-icn" onclick="noNeedBtn(); playClick();"> -> </a>
       </div>
       <div id="btn-1">
-        <button onclick="playClick();" class="toggle-button">
+        <button onclick="playClick(); disableGrad();" class="toggle-button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="48px"
@@ -691,7 +699,7 @@
         </button>
       </div>
       <div id="btn-2">
-        <button onclick="playClick();" class="toggle-button">
+        <button onclick="playClick(); enableGrad();" class="toggle-button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="48px"

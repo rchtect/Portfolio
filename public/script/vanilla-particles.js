@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let size = Math.random() * 5 + 1;
       let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
       let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
-      let dirX = Math.random() * 5 - 2.5;
-      let dirY = Math.random() * 5 - 2.5;
+      let dirX = Math.random() * 2 - 1;
+      let dirY = Math.random() * 2 - 1;
       let color = document.documentElement.style.getPropertyValue('--toggle-color');
 
       particlesArray.push(new Particle(x, y, dirX, dirY, size, color));
