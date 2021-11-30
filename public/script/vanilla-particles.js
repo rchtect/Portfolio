@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-      ctx.fillStyle = document.documentElement.style.getPropertyValue('--toggle-color');
+      ctx.fillStyle =
+        document.documentElement.style.getPropertyValue("--toggle-color");
       ctx.fill();
     }
 
@@ -46,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
       let dirX = Math.random() * 2 - 1;
       let dirY = Math.random() * 2 - 1;
-      let color = document.documentElement.style.getPropertyValue('--toggle-color');
+      let color =
+        document.documentElement.style.getPropertyValue("--toggle-color");
 
       particlesArray.push(new Particle(x, y, dirX, dirY, size, color));
     }
@@ -60,7 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
           (particlesArray[a].y - particlesArray[b].y) *
             (particlesArray[a].y - particlesArray[b].y);
         if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-          ctx.strokeStyle = document.documentElement.style.getPropertyValue('--toggle-color');
+          ctx.strokeStyle =
+            document.documentElement.style.getPropertyValue("--toggle-color");
           ctx.lineWidth = 0.5;
           ctx.beginPath();
           ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -80,11 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
     connect();
   }
 
-  window.addEventListener("resize", 
-  function () {
-      canvas.width = innerWidth;
-      canvas.height = innerHeight;
-      init();
+  window.addEventListener("resize", function () {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    init();
   });
   init();
   animate();

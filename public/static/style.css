@@ -7,10 +7,10 @@
   --bg-grad: linear-gradient(to left, #003cff2d 0%, #ff000031 100%);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-   -khtml-user-select: none; 
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 * {
@@ -124,7 +124,6 @@ svg {
   transition-duration: 0ms;
 }
 
-
 ul.nav {
   margin-top: 10px;
   display: flex;
@@ -202,7 +201,6 @@ ul.nav {
   overflow-y: scroll;
   height: 100vh;
 }
-
 
 .darkmodetoggle {
   position: fixed;
