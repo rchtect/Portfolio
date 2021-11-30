@@ -1,5 +1,24 @@
-var element = document.getElementById('container')
-var section = document.getElementById('section')
+const element = document.getElementById('container')
+const currentYear = new Date().getFullYear()
+document.addEventListener("DOMContentLoaded", function() {
+  showBirthDay();
+  showExperience();
+})
+
+function showBirthDay() {
+  const birthday = document.querySelector('.birthday');
+  const birthYear = JSON.parse(birthday.getAttribute('data-born'));
+  const age = (currentYear - birthYear)
+  document.getElementById("year").innerHTML = " " + age + " "
+}
+
+function showExperience() {
+  const started = document.querySelector('.started');
+  const startYear = JSON.parse(started.getAttribute('data-started'));
+  const time = (currentYear - startYear)
+  document.getElementById("startedYear").innerHTML = " " + time + " "
+}
+
 function playClick() {
     document.getElementById("clickAudio").pause();
     document.getElementById("clickAudio").currentTime = 0;
@@ -18,14 +37,6 @@ function noNeedBtn() {
   element.classList.add("hide");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector('.container')
-  .addEventListener('scroll', function() {
-    element.classList.remove("hide");
-    element.classList.add("show");
-  }, false);
-})
-
 function enableGrad() {
   document.documentElement.style.setProperty('--bg-grad', 'linear-gradient(to left, #003cff2d 0%, #ff000031 100%)');
 }
@@ -33,3 +44,4 @@ function enableGrad() {
 function disableGrad() {
   document.documentElement.style.setProperty('--bg-grad', 'none');
 }
+
