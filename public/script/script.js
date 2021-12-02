@@ -25,6 +25,14 @@ function playClick() {
   document.getElementById("clickAudio").play();
 }
 
+function playHover() {
+  document.getElementById("hoverAudio").pause();
+  document.getElementById("hoverAudio").currentTime = 0;
+  setTimeout(() => {
+    document.getElementById("hoverAudio").play();
+  }, 200)
+}
+
 function needBtn() {
   var element = document.querySelector("#up-icn");
   element.classList.remove("hide");

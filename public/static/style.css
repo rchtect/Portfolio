@@ -4,7 +4,8 @@
   --bg-color: rgba(247, 0, 255, 0.438);
   --btn-padding: 7px;
   --icn-size: 35px;
-  --bg-grad: linear-gradient(to left, #003cff2d 0%, #ff000031 100%);
+  --bg-grad: linear-gradient(to left, #c4d2ff 0%, #ffbfbf 100%);
+  --grad: linear-gradient(to left, rgb(255, 161, 161) 0%, rgb(185, 185, 255) 100%);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -34,6 +35,14 @@ a {
   padding: var(--btn-padding);
 }
 
+a.hide {
+  display: none;
+}
+
+a.show {
+  display: block;
+}
+
 a#up-icn {
   transform: rotate(-90deg);
   text-decoration: none;
@@ -41,16 +50,17 @@ a#up-icn {
   margin-bottom: 20px;
 }
 
-b#b-intro {
-  color: black;
-}
-
-b#b-intro:hover {
-  padding: 0px 3px 0px 3px;
-  background: linear-gradient(to left, #003cff7c 0%, #ff000085 100%);
+b:hover {
+  padding: 10px;
+  background: var(--grad);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: translateY(4px);
+}
+
+b#b-intro {
+  color: black;
 }
 
 button {
@@ -61,7 +71,7 @@ li {
   border-radius: 100px;
 }
 li:hover {
-  background: linear-gradient(to left, #003cff7c 0%, #ff000085 100%);
+  background: var(--grad);
   border-radius: 100px;
   background-color: white;
 }
@@ -107,6 +117,18 @@ path {
   transition-duration: 0ms;
 }
 
+p {
+  padding: 5px;
+  margin-left: 20px;
+}
+p:hover {
+  padding: 10px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
 section {
   display: flex;
   justify-content: center;
@@ -172,7 +194,7 @@ ul.nav {
 
 /* Classes Scope */
 
-.aboutme-wrapper {
+.wrapper {
   filter: invert();
   max-width: 900px;
   background-color: var(--toggle-color);
@@ -184,13 +206,13 @@ ul.nav {
   flex-direction: column;
 }
 
-.aboutme-wrapper h1 {
+.wrapper h1 {
   padding: 20px;
   filter: invert();
   font-size: 2em;
 }
 
-.aboutme-wrapper p {
+.wrapper p {
   filter: invert();
 }
 
@@ -207,10 +229,6 @@ ul.nav {
   bottom: 0;
   right: 40px;
   margin-bottom: 10px;
-}
-
-.hide {
-  display: none;
 }
 
 .logo {
@@ -238,10 +256,6 @@ ul.nav {
   margin-bottom: 10px;
 }
 
-.show {
-  display: block;
-}
-
 .toggle-button {
   display: flex;
   justify-content: center;
@@ -254,6 +268,5 @@ ul.nav {
 .toggle-button:hover {
   transition-duration: 300ms;
   transform: translateY(-5px);
-  background: linear-gradient(to left, #003cff7c 0%, #ff000085 100%);
-  background-color: white;
+  background: var(--grad);
 }

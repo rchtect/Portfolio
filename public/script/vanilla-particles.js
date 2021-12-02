@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 9000;
+    let numberOfParticles = (canvas.height * canvas.width) / 12000;
     for (let i = 0; i < numberOfParticles; i++) {
       let size = Math.random() * 5 + 1;
       let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
             (particlesArray[a].x - particlesArray[b].x) +
           (particlesArray[a].y - particlesArray[b].y) *
             (particlesArray[a].y - particlesArray[b].y);
-        if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+        if (distance < (canvas.width / 9) * (canvas.height / 9)) {
           ctx.strokeStyle =
             document.documentElement.style.getPropertyValue("--toggle-color");
           ctx.lineWidth = 0.5;
