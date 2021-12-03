@@ -17,7 +17,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Fira Code", monospace;
   list-style-type: none;
@@ -65,6 +64,10 @@ b#b-intro {
 
 button {
   border: none;
+}
+
+h2 {
+  margin-bottom: 10px;
 }
 
 li {
@@ -120,7 +123,17 @@ path {
 p {
   padding: 5px;
   margin-left: 20px;
+  max-width: 900px;
 }
+
+p.projects {
+  max-width: 500px;
+}
+
+p.projects:hover {
+  filter: invert(100%);
+}
+
 p:hover {
   padding: 10px;
   background: var(--grad);
@@ -129,10 +142,12 @@ p:hover {
   -webkit-text-fill-color: transparent;
   font-weight: bolder;
 }
+
 section {
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
   scroll-snap-align: start;
@@ -162,6 +177,8 @@ ul.nav {
 .intro-container {
   padding: 10px 20px 10px 20px;
   background-color: white;
+  width: 80%;
+  max-width: 600px;
 }
 
 .typewriter-txt {
@@ -175,6 +192,7 @@ ul.nav {
 /* ID Elements scope */
 #cta {
   position: relative;
+  align-items: center;
 }
 
 #particles {
@@ -194,26 +212,52 @@ ul.nav {
 
 /* Classes Scope */
 
-.wrapper {
-  filter: invert();
-  max-width: 900px;
-  background-color: var(--toggle-color);
-  width: auto;
-  height: 70%;
-  width: 90%;
-  display: flex;
+.aboutme {
   align-items: center;
+}
+
+.contact {
+  align-items: center;
+}
+
+.contact-txt {
+  margin: unset;
+  font-size: 16px;
+  filter: invert();
+}
+
+.contact-links {
+  display: flex;
+  margin-top: 20px;
+}
+
+.contact-links li:hover {
+  border-radius: unset;
+  background: white;
+  color: black;
+}
+
+.contact-links a {
+  margin: 5px;
+  font-size: 30px;
+}
+
+.contact-links ul {
+  display: flex;
+  flex-direction: row;
+  filter: invert();
+}
+
+.contact-wrapper {
   flex-direction: column;
-}
-
-.wrapper h1 {
   padding: 20px;
+  background-color: var(--toggle-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   filter: invert();
-  font-size: 2em;
-}
-
-.wrapper p {
-  filter: invert();
+  width: 80%;
+  max-width: 900px;
 }
 
 .container {
@@ -235,8 +279,69 @@ ul.nav {
   height: 51px;
   width: auto;
 }
+
+.mobile-nav {
+  display: none;
+  justify-content: center;
+  flex-direction: row;
+}
+
 .paragraph {
   text-align: left;
+  margin-top: 40px; margin-bottom: 40px;
+}
+
+.proj {
+  align-items: center;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.project-links {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.project-social {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+
+.project-social:hover {
+  background: var(--grad);
+  border-radius: 100px;
+  transition: 0s;
+}
+
+.project-txt {
+  filter: invert();
+  padding: 20px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-txt p:hover {
+  filter: invert(0%);
+}
+
+.project-wrapper {
+  background-color: var(--toggle-color);
+  padding: 20px;
+  flex-direction: row;
+  display: flex;
+  margin-top: 20px;
+  filter: invert(100%);
 }
 
 .rchtect-logo {
@@ -249,11 +354,33 @@ ul.nav {
   margin-top: 10px;
 }
 
+.right {
+  align-self: flex-start;
+}
+
+.section-title {
+  padding: 20px;
+  font-size: 2em;
+}
+
 .socials {
   position: fixed;
   bottom: 0;
   left: 40px;
   margin-bottom: 10px;
+}
+
+.thumbnail {
+  height: 300px;
+  width: auto;
+  filter: invert();
+}
+
+.thumbnail-small {
+  display: none;
+  filter: invert(0%);
+  height: 20vh;
+  width: auto;
 }
 
 .toggle-button {
@@ -269,4 +396,22 @@ ul.nav {
   transition-duration: 300ms;
   transform: translateY(-5px);
   background: var(--grad);
+}
+
+.white {
+  filter: invert(0%);
+}
+
+.wrapper {
+  filter: invert();
+  max-width: 900px;
+  background-color: var(--toggle-color);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper p {
+  filter: invert();
 }

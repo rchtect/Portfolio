@@ -13,6 +13,7 @@
     <script src="./script/typewriter.js"></script>
     <script src="./script/script.js"></script>
     <link rel="stylesheet" href="./static/style.css" />
+    <link rel="stylesheet" href="./static/mobile.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -605,9 +606,22 @@
             </ul>
           </nav>
         </div>
+        <nav class="mobile-nav">
+          <ul>
+            <li>
+              <a href="#aboutme" onclick="playClick(); needBtn();">About me</a>
+            </li>
+            <li>
+              <a href="#projects" onclick="playClick(); needBtn();">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" onclick="playClick(); needBtn();">Contact me</a>
+            </li>
+          </ul>
+        </nav>
           <div class="intro-container">
             <h1 class="intro">
-              Hello, I'm <b id="b-intro">rchtect</b> a :<b id="b-intro"><span class="typing-fx" data-wait="3000" data-words='["Developer", "Designer", "Problem solver", "Creator", "Stoic", "Freethinker", "Technology Enthusiast", "Music Producer"]'></span></b>
+              Hello, I'm <b id="b-intro">rchtect</b> a :<b id="b-intro"><span class="typing-fx" data-wait="3000" data-words='["Developer", "Designer", "Problem solver", "Creator", "Stoic", "Freethinker", "Technology Enthusiast"]'></span></b>
             </h1>
           </div>
         <div class="card">
@@ -615,27 +629,110 @@
         </div>
       </section>
       <section class="aboutme" id="aboutme">
+        <h1 class="invert section-title">A little <b>about me</b></h1>
         <div class="wrapper">
-          <h1>A little <b>about me</b></h1>
           <div class="paragraph">
             <p onmouseover="playHover();">- I'm a currently studying front-end development at Medieinstitutet (GBG, Sweden). </p>
             <p onmouseover="playHover();">- Html, css, js, vue.js and ruby are things I can work with currently. </p>
             <p onmouseover="playHover();">- Born '02 so I am currently<span data-born="2002" class="birthday" id="year"></span>years old.</p>
             <p onmouseover="playHover();">- Started with coding and programming in 2019, that gives me <span data-started="2019" class="started" id="startedYear"></span> years of experience.</p>
-            <p onmouseover="playHover();">- Love to learn new things, always with the student mindset.</p>
-            <p onmouseover="playHover();">- Planning on going from an front-end developer to full-stack and perhaps software engineering.</p>
-            <p onmouseover="playHover();">- When not coding I'm erm coding- I mean working on myself. I believe that personal growth is very important to oneself.</p>
-            <p onmouseover="playHover();">- Why form over function (or function over form) when you can have both?</p>
+            <p onmouseover="playHover();">- Love to learn new things, always with the student mindset in mind.</p>
+            <p onmouseover="playHover();" class="extra">- Planning on going from an front-end developer to full-stack and perhaps software engineering.</p>
+            <p onmouseover="playHover();" class="extra">- When not coding I'm erm coding- I mean working on myself. I believe that personal growth is very important to oneself.</p>
+            <p onmouseover="playHover();" class="extra">- Why form over function (or function over form) when you can have both?</p>
           </div>
         </div>
       </section>
-      <section class="projects" id="projects">
-        <div class="wrapper">
-          <h1>Projects</h1>
+      <section class="proj" id="projects">
+        <h1 class="section-title white">Projects</h1>
+        <div class="project-container">
+          <div class="project-wrapper">
+            <img src="./static/adonlist.png" alt="" class="thumbnail">
+            <div class="project-txt">
+              <h2>Adonlist</h2>
+              <img src="./static/adonlist-small.png" alt="" class="thumbnail-small">
+              <p class="projects" onmouseover="playHover();">This PWA has been used countless of times by Hamza Ahmed's discord server. <br>It's written in Vue.JS</p>
+              <div class="project-links">
+                <a href="https://rchtect.github.io/Adonlist" class="project-social" onclick="playClick();">
+                  <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24"
+                  >
+                    <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/rchtect/Adonlist" class="project-social" onclick="playClick();">
+                  <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-wrapper">
+            <div class="project-txt">
+              <h2>ScriptDungeon</h2>
+              <img src="./static/scriptdungeon-small.png" alt="" class="thumbnail-small">
+              <p class="projects" onmouseover="playHover();">ScriptDungeon is a choice-based rpg written in vanilla JS.</p>
+              <div class="project-links right">
+                <a href="https://rchtect.github.io/Adonlist" class="project-social" onclick="playClick();">
+                  <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24"
+                  >
+                    <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/rchtect/Adonlist" class="project-social" onclick="playClick();">
+                  <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+                </a>
+              </div>
+            </div>
+            <img src="./static/scriptdungeon.png" alt="" class="thumbnail">
+          </div>
         </div>
       </section>
       <section class="contact" id="contact">
-        <h1>forth page</h1>
+        <h1 class="section-title">Contact me</h1>
+        <div class="contact-wrapper">
+          <p class="contact-txt">You can reach me on</p>
+          <div class="contact-links">
+            <ul>
+              <li>
+                <a href="mailto:hello@rchtect.dev?subject=Contact from Portfolio">Mail</a>
+              </li>
+              <li>
+                <a href="https://github.com/rchtect">Github</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/rchtect">Twitter</a>
+              </li>
+              <li>
+                <a href="tel:+46724036626">Phone</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
     </div>
     <div class="socials">

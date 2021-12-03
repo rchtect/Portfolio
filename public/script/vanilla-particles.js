@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function init() {
     particlesArray = [];
     let numberOfParticles = (canvas.height * canvas.width) / 12000;
+    if (innerWidth >= 3840 && innerHeight >= 2160) {
+      numberOfParticles = (canvas.height * canvas.width) / 29000;
+    }
     for (let i = 0; i < numberOfParticles; i++) {
       let size = Math.random() * 5 + 1;
       let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
