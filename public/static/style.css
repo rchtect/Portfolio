@@ -231,6 +231,9 @@ ul.nav {
   margin-top: 20px;
 }
 
+.contact-links li {
+  border-radius: unset;
+}
 .contact-links li:hover {
   border-radius: unset;
   background: white;
