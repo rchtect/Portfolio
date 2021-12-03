@@ -18,6 +18,9 @@
   .contact-links a {
     font-size: 18px;
   }
+  .contact-links li {
+    margin-bottom: 10px;
+  }
   .contact-links ul {
     flex-direction: column;
   }
@@ -124,7 +127,7 @@
   }
 }
 
-@media only screen and (max-height: 740px) {
+@media only screen and (max-height: 750px) {
   .project-wrapper {
     margin-top: 5px;
   }
@@ -192,7 +195,43 @@
 }
 
 @media only screen and (max-height: 600px) {
-  img {
+  img.thumbnail {
     display: none;
   }
+  img.thumbnail-small {
+    display: block;
+  }
+  .project-wrapper {
+    align-items: center;
+    padding: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+    min-height: 100%;
+    justify-content: center;
+    margin-top: 15px;
+}
+img.thumbnail-small {
+  display: block;
+}
+.project-txt {
+  padding: 0;
+  justify-content: space-between;
+  align-self: flex-start;
+  height: 100%;
+}
+
+.project-container {
+  flex-direction: row;
+}
+.project-txt p {
+  max-width: 90%;
+}
+.right {align-self: center;}
+.project-links {
+  align-self: center;
+} 
+
+p.projects {
+  max-width: 300px;
+}
 }
